@@ -1,0 +1,29 @@
+{
+  "project_name": "Nebraska",
+  "workflow_path": "/scratch/yenc/projects/SyntheticAccessionsPipeline",
+  "input_files": [
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr01.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr02.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr03.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr04.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr05.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr06.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr07.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr08.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr09.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr10.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr11.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr12.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr13.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr14.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr15.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr16.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr17.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr18.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr19.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Nebraska/Nebraska_Chr20.vcf"
+  ],
+  "output_folder": "/scratch/yenc/projects/SyntheticAccessionsPipeline/output/",
+  "memory": 100,
+  "threads": 10
+}

@@ -1,0 +1,29 @@
+{
+  "project_name": "Soy775",
+  "workflow_path": "/scratch/yenc/projects/SyntheticAccessionsPipeline",
+  "input_files": [
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr01.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr02.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr03.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr04.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr05.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr06.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr07.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr08.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr09.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr10.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr11.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr12.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr13.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr14.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr15.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr16.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr17.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr18.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr19.vcf",
+    "/scratch/yenc/projects/SyntheticAccessionsPipeline/data/Soy775/Soy775_Chr20.vcf"
+  ],
+  "output_folder": "/scratch/yenc/projects/SyntheticAccessionsPipeline/output/",
+  "memory": 100,
+  "threads": 10
+}

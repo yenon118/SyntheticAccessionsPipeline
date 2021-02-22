@@ -1,0 +1,11 @@
+/data/
+/output/
+/scripts/python/Variant/__pycache__/
+/.snakemake/
+
+*.vcf
+*.vcf.idx
+*.txt
+*.sh
+*.out
+slurm*
