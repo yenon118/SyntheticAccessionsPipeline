@@ -7,6 +7,8 @@ import argparse
 
 from joblib import Parallel, delayed
 
+import pandas as pd
+
 
 def generate_reference_line_and_synthetic_line(header, line, output_file_path, summary_file_path=None):
     line = str(line).strip()
@@ -75,13 +77,13 @@ def generate_reference_line_and_synthetic_line(header, line, output_file_path, s
     line_array.append('0/0')
 
     # Determine alternate synthetic line genotype
-    alternate_genotype_array = ['.']*2
+    alternate_genotype_array = ['.'] * 2
     for key in alternate_genotypes_frequency_dict.keys():
         if key != './.':
             genotype_indexes_array = str(key).split("/")
             if len(genotype_indexes_array) == 2 and genotype_indexes_array[0] == genotype_indexes_array[1]:
-                alternate_genotype_array[0] = alternate_alleles.index(genotype_indexes_array[0])+1
-                alternate_genotype_array[1] = alternate_alleles.index(genotype_indexes_array[1])+1
+                alternate_genotype_array[0] = alternate_alleles.index(genotype_indexes_array[0]) + 1
+                alternate_genotype_array[1] = alternate_alleles.index(genotype_indexes_array[1]) + 1
                 break
     line_array.append('/'.join([str(element) for element in alternate_genotype_array]))
 
@@ -93,6 +95,8 @@ def generate_reference_line_and_synthetic_line(header, line, output_file_path, s
     if summary_file_path is not None:
         frequency_str = str(line_array[0]) + "\t" + \
                         str(line_array[1]) + "\t" + \
+                        str(line_array[3]) + "\t" + \
+                        str(line_array[4]) + "\t" + \
                         str(''.join(list(reference_genotypes_frequency_dict.keys()))) + "\t" + \
                         str(''.join(
                             [str(element) for element in list(reference_genotypes_frequency_dict.values())])
@@ -170,18 +174,33 @@ def main(args):
 
     # Write metadata and header
     with open(output_file_path, 'w') as writer:
-        writer.write(str('\n'.join(input_metadata_array))+'\n')
+        writer.write(str('\n'.join(input_metadata_array)) + '\n')
         writer.write(header.strip() + '\tRef_syn\tAlt_syn\n')
 
+    # If summary file path is not none, write summary file header
     if summary_file_path is not None:
         # Write summary file header
         with open(summary_file_path, 'w') as writer:
-            writer.write('Chromosome\tPosition\tReference\tReference_count\tAlternate\tAlternate_count\n')
+            writer.write(
+                'Chromosome\tPosition\tReference\tAlternate\tReference_genotype\t' +
+                'Reference_count\tAlternate_genotype\tAlternate_count\n'
+            )
 
     Parallel(n_jobs=n_jobs)(
         delayed(generate_reference_line_and_synthetic_line)(header, line, output_file_path, summary_file_path)
         for line in reader
     )
+
+    # If summary file path is not none, sort summary file
+    if summary_file_path is not None:
+        dat = pd.read_table(
+            filepath_or_buffer=summary_file_path,
+            sep='\t'
+        )
+
+        dat = dat.sort_values(by=['Chromosome', 'Position'])
+
+        dat.to_csv(path_or_buf=summary_file_path, sep='\t', index=False, header=True, doublequote=False)
 
     #######################################################################
     # Close input file

@@ -11,9 +11,10 @@ In order to run the SyntheticAccessionsPipeline, users need to install software,
 The software, programming languages, and packages include: 
 
 ```
+GATK>=4.1.7.0
 Python3>=3.7.0
 Snakemake>=5.31.0
-GATK>=4.1.7.0
+Pandas>=1.1.3
 ``` 
 
 ## Installation
